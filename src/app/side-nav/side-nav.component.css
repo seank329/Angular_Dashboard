@@ -1,0 +1,30 @@
+.side-nav-container{
+    display:flex;
+    width:4.9%;
+    border: 1px solid black;
+    position:fixed;
+    height:100vh;
+    background-color: #262626;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    /* box-shadow: 7px 7px 5px grey; */
+}
+
+.fa-infinity{
+    margin-top:2.4vh;
+    color:#FFFFFF;
+    font-size: 2em;
+}
+
+.fa-home{
+    margin-top:5vh;
+    color:#80D26B;
+    font-size: 2em;
+}
+
+.fa-folder{
+    margin-top:3vh;
+    color:#FFFFFF;
+    font-size: 2em;
+}

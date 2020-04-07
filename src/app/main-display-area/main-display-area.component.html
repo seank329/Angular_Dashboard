@@ -1,0 +1,57 @@
+<script src="https://kit.fontawesome.com/4a18c0dd92.js" crossorigin="anonymous"></script>
+
+<div class='main-display-area'>
+    <h2 id='home'>Home</h2>
+    <h2>Dashboard</h2>
+    <select ng-model="selectedName" >
+        <option> Example Filter </option>
+    </select>
+    <div class='smallCharts'>
+        <div class='summary chart' style="position: relative">
+            <h3>Summary of My Items</h3>
+            <p>This is a sub-description for the card.</p>
+            <canvas baseChart
+                    [data]='doughnutChartData'
+                    [labels]='doughnutChartLabels'
+                    [chartType]='doughnutChartType'
+                    [colors]='doughnutChartColors'
+                    [options]='doughnutChartOptions'>
+            </canvas>
+        </div>
+        <div class='comparison chart'>
+            <h3>Some Comparison Chart</h3>
+            <p>This is a sub-description for the card.</p>
+            <canvas baseChart
+                    [datasets]='barChartData'
+                    [labels]='barChartLabels'
+                    [chartType]='barChartType'
+                    [colors]='barChartColors'
+                    [options]='barChartOptions'>
+            </canvas>
+        </div>
+        <div class='topFive chart'>
+            <h3>Top 5 Items by Some Measure</h3>
+            <p>This is a sub-description for the card.</p>
+            <div class='flexText'>
+                <ol>
+                    <li><span class='item'><span class='individual'>Item A </span> New <span class='date'>Feb. 29, 2020<i class="fas fa-link"></i></span></span></li>
+                    <li><span class='item'><span class='individual'>Item B </span> New <span class='date'>Feb. 28, 2020<i class="fas fa-link"></i></span></span></li>
+                    <li><span class='item'><span class='individual'>Item C </span> New <span class='date'>Feb. 05, 2020<i class="fas fa-link"></i></span></span></li>
+                    <li><span class='item'><span class='individual'>Item D </span> In Progress <span class='date'>Jan. 31, 2020<i class="fas fa-link"></i></span></span></li>
+                    <li><span class='item'><span class='individual'>Item E </span> In Progress <span class='date'> Dec. 17, 2019<i class="fas fa-link"></i></span></span></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <div class='largeChart'>
+        <h3 id='trend'>Trend Analysis Over Time <span id='subTitle'><p>(Compared to Some Reference Line)</p></span></h3>
+        <canvas baseChart
+        id='large'
+        [datasets]='lineChartData'
+        [labels]='lineChartLabels'
+        [chartType]='lineChartType'
+        [options]='lineChartOptions'>
+</canvas>
+    </div>
+</div>
+
